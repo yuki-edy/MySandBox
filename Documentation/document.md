@@ -3,3 +3,4 @@
 ##
 - GitHubにcommitしてみました。
 - VScodeからの連携テストです。
+- GitHubからでも直接編集可能です。
