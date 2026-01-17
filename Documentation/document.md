@@ -1,5 +1,5 @@
 # ソフトウェア品質を測定可能にする
 
 ##
-GitHubにcommitしてみました。
-VScodeからの連携テストです。
+- GitHubにcommitしてみました。
+- VScodeからの連携テストです。
