@@ -2,3 +2,4 @@
 
 ##
 GitHubにcommitしてみました。
+VScodeからの連携テストです。
