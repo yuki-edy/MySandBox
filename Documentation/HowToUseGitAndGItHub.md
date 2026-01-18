@@ -20,6 +20,11 @@ git --version
 git config --global user.name "Firstname Lastname"
 git config --global user.email "my_email@example.com"
 ```
+上記の設定が反映されているか、グローバルの構成(config)情報を確認する。
+
+```bash
+git config --global --list
+```
 
 ## 1.2. GitHubのアカウント作成
 
