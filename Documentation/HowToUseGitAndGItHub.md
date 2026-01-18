@@ -8,6 +8,14 @@
 
 ## 1.1. Gitのインストール
 
+### configファイルに名前とアドレスを設定する
+- これによって、pushした際に誰がpushしたかをGitHub側が判別できる。
+
+```bash
+git config --global user.name "Firstname Lastname"
+git config --global user.email "my_email@example.com"
+```
+
 ## 1.2. GitHubのアカウント作成
 
 ## 1.3. VSCodeのインストール
