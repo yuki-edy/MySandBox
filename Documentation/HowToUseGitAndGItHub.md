@@ -39,16 +39,12 @@ git config --global core.quotepath false
 git config --global --list
 ```
 
-以下のコマンドで接続テストする。
-
-```bash
-ssh -T git@github.com
-```
-
 ## 1.2. GitHubのアカウント作成
 
 ## 1.3. ローカル環境とGItHubとのSSH接続
 
+
+### SSHキーの確認
 
 SSHキーがあるかを確認する。
 ```bash
@@ -61,6 +57,7 @@ ls ~/.ssh
 id_ed25519
 id_ed25519.pub
 ```
+### SSHキーの作成
 
 鍵がない場合は、次の方法で作成できる。
 - ed25519は暗号の種類
@@ -69,7 +66,36 @@ id_ed25519.pub
 ```bash
 ssh-keygen -t ed25519 -C "My_GitHub_Account_Adress@github"
 ```
+この際に、鍵の名前やパスワードを設定する。
+以下、鍵の名前はmykeyとする
 
+sshエージェントを起動して、秘密鍵を有効化する。
+
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/mykey
+```
+
+不安であれば、SSHキーがあるかを再度確認する。
+```bash
+ls ~/.ssh
+```
+ここに、先ほど作成したmykeyがあればOK。
+
+### GitHub上への公開鍵の設定
+
+公開鍵を表示する
+
+```bash
+cat ~/.ssh/mykey.pub
+```
+これで表示した公開鍵をGitHub上に登録する。
+
+以下のコマンドでssh接続テストする。
+
+```bash
+ssh -T git@github.com
+```
 
 試しに確認。
 
