@@ -1,8 +1,8 @@
 # プログラム品質規約
 
-##　目的
-プログラムとしての品質を測定可能にする
-※最終的にはCI(continuous integration)に落とし込みたい。
+## 目的
+- プログラムとしての品質を測定可能にする
+- ※最終的にはCI(continuous integration)に落とし込みたい。
 
 ## 1. 可読性(Readability)
 - ネスト深さ3段以内
