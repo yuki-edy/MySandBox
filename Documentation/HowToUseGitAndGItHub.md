@@ -105,6 +105,9 @@ ssh -T git@github.com
 git clone https://github.com/（ユーザー名）/MySandBox.git
 ```
 
+これで、MySandBoxが確認されていればクローン成功。
+
+
 ## 1.4. VSCodeのインストール/各種設定
 
 
