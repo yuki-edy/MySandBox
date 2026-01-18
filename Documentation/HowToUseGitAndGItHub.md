@@ -6,7 +6,7 @@
 
 # 1. 環境構築
 
-## 1.1. Gitのインストール
+## 1.1. Gitのインストール・初期設定
 
 インストールされたかどうかを確認する。
 ```bash
@@ -20,17 +20,54 @@ git --version
 git config --global user.name "Firstname Lastname"
 git config --global user.email "my_email@example.com"
 ```
+
+### デフォルトブランチ名を設定する
+```bash
+git config --global init.defaultBranch main
+```
+
+### 文字化け対策
+```bash
+git config --global core.quotepath false
+```
+
+
 上記の設定が反映されているか、グローバルの構成(config)情報を確認する。
+
 
 ```bash
 git config --global --list
 ```
 
+以下のコマンドで接続テストする。
+
+```bash
+ssh -T git@github.com
+```
+
 ## 1.2. GitHubのアカウント作成
 
-## 1.3. VSCodeのインストール
+## 1.3. ローカル環境とGItHubとのSSH接続
 
-## 1.4. ローカルとGItHubとのSSH接続
+
+試しに確認。
+
+※とあるユーザーが作ったMySandBoxというレポジトリをクローンしてみる
+
+```
+git clone https://github.com/（ユーザー名）/MySandBox.git
+```
+
+## 1.4. VSCodeのインストール/各種設定
+
+
+
+
+SSHキーがあるかを確認する。
+```bash
+ls ~/.ssh
+```
+
 
 ## 1.5. VSCodeとの連携
 
