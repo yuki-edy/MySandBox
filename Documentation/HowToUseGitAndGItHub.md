@@ -50,6 +50,27 @@ ssh -T git@github.com
 ## 1.3. ローカル環境とGItHubとのSSH接続
 
 
+SSHキーがあるかを確認する。
+```bash
+ls ~/.ssh
+```
+
+- すでにある場合の出力例。
+- .pubは公開鍵を意味する。.pubがついていない方は**必ずローカル環境の中に保管しておく**。
+```text
+id_ed25519
+id_ed25519.pub
+```
+
+鍵がない場合は、次の方法で作成できる。
+- ed25519は暗号の種類
+- ""の中には正しいアドレスを入れる。
+  
+```bash
+ssh-keygen -t ed25519 -C "My_GitHub_Account_Adress@github"
+```
+
+
 試しに確認。
 
 ※とあるユーザーが作ったMySandBoxというレポジトリをクローンしてみる
@@ -62,11 +83,6 @@ git clone https://github.com/（ユーザー名）/MySandBox.git
 
 
 
-
-SSHキーがあるかを確認する。
-```bash
-ls ~/.ssh
-```
 
 
 ## 1.5. VSCodeとの連携
