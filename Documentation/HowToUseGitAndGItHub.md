@@ -43,6 +43,11 @@ git config --global --list
 
 ## 1.3. ローカル環境とGItHubとのSSH接続
 
+SSH接続を確立するためには、ローカルで発行したSSHキーに対して、
+- SSHエージェント
+- Gitのconfigファイル
+- GitHub（公開鍵のみ）
+の3者が認識できる状態にする必要がある。
 
 ### SSHキーの確認
 
@@ -69,6 +74,9 @@ ssh-keygen -t ed25519 -C "My_GitHub_Account_Adress@github"
 この際に、鍵の名前やパスワードを設定する。
 以下、鍵の名前はmykeyとする
 
+
+### SSHエージェントでの有効化
+
 sshエージェントを起動して、秘密鍵を有効化する。
 
 ```bash
@@ -81,6 +89,10 @@ ssh-add ~/.ssh/mykey
 ls ~/.ssh
 ```
 ここに、先ほど作成したmykeyがあればOK。
+
+### Gitのconfigファイルへの追加
+
+
 
 ### GitHub上への公開鍵の設定
 
